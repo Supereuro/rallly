@@ -14,6 +14,7 @@ export const dynamic = "force-dynamic";
 export default async function LoginPage({ params }: { params: Params }) {
   const { t } = await getTranslation(params.locale);
   return (
+    <>
     <div>
       <AuthCard>
         <LoginForm
@@ -21,6 +22,7 @@ export default async function LoginPage({ params }: { params: Params }) {
         />
       </AuthCard>
     </div>
+    </>
   );
 }
 
