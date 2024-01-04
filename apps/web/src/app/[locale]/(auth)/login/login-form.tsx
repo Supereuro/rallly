@@ -77,7 +77,7 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
   }
 
   return (
-    <form
+    <!--<form
       onSubmit={handleSubmit(async ({ email }) => {
         const res = await sendVerificationEmail(email);
 
@@ -89,7 +89,7 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
           setEmail(email);
         }
       })}
-    >
+    >-->
       <div className="mb-1 text-2xl font-bold">{t("login")}</div>
       <!--<p className="mb-4 text-gray-500">
         {t("stepSummary", {
