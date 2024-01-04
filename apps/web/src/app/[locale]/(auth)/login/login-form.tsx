@@ -91,7 +91,7 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
       })}
     >
       <div className="mb-1 text-2xl font-bold">{t("login")}</div>
-      <p className="mb-4 text-gray-500">
+      <!--<p className="mb-4 text-gray-500">
         {t("stepSummary", {
           current: 1,
           total: 2,
@@ -126,7 +126,7 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
           className=""
         >
           {t("continue")}
-        </Button>
+        </Button>-->
         {hasAlternativeLoginMethods ? (
           <>
             <hr className="border-t border-grey-500 my-4" />
