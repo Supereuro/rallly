@@ -26,6 +26,7 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
   const callbackUrl = (useSearchParams()?.get("callbackUrl") as string) ?? "/";
 
   return (    
+    <form>
       <div className="flex flex-col gap-2">
           <div className="grid gap-4">
               <Button
@@ -39,6 +40,7 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
                 />
               </Button>              
             </div>
-    </div>
+      </div>
+    </form>
   );
 }
