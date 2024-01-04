@@ -17,7 +17,7 @@ export default async function LoginPage({ params }: { params: Params }) {
     <div>
       <AuthCard>
         <LoginForm
-          oidcConfig={{ name: oidcName }}
+          oidcConfig={ name: oidcName }
         />
       </AuthCard>
     </div>
