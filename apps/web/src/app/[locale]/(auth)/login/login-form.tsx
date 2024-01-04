@@ -1,4 +1,4 @@
--com"use client";
+"use client";
 import { Button } from "@rallly/ui/button";
 import { LogInIcon, UserIcon } from "lucide-react";
 import Link from "next/link";
