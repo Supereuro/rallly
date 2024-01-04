@@ -91,13 +91,13 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
       })}
     >
       <div className="mb-1 text-2xl font-bold">{t("login")}</div>
-      <p className="mb-4 text-gray-500">
+      <!--<p className="mb-4 text-gray-500">
         {t("stepSummary", {
           current: 1,
           total: 2,
         })}
-      </p>
-      <fieldset className="mb-4">
+      </p>-->
+      <!--<fieldset className="mb-4">
         <label htmlFor="email" className="mb-1 text-gray-500">
           {t("email")}
         </label>
@@ -116,9 +116,9 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
             {formState.errors.email.message}
           </div>
         ) : null}
-      </fieldset>
+      </fieldset>-->
       <div className="flex flex-col gap-2">
-        <Button
+        <!--<Button
           loading={formState.isSubmitting}
           type="submit"
           size="lg"
@@ -126,7 +126,7 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
           className=""
         >
           {t("continue")}
-        </Button>
+        </Button>-->
         {hasAlternativeLoginMethods ? (
           <>
             <hr className="border-t border-grey-500 my-4" />
