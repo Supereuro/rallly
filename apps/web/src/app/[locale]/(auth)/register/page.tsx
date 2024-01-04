@@ -11,7 +11,7 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <div>
       <AuthCard>
-        <RegisterForm />
+        <!--<RegisterForm />-->
       </AuthCard>
       <div className="mt-4 text-center pt-4 text-gray-500 sm:text-base">
         <Trans
