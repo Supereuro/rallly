@@ -32,40 +32,22 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
   const router = useRouter();
   const callbackUrl = (useSearchParams()?.get("callbackUrl") as string) ?? "/";
 
-  const hasOIDCProvider = !!oidcConfig;
-  const allowGuestAccess = !isSelfHosted;
-  const hasAlternativeLoginMethods = hasOIDCProvider || allowGuestAccess;
-
   return (
       <div className="mb-1 text-2xl font-bold">{t("login")}</div>
-        {hasAlternativeLoginMethods ? (
-          <>
-            <hr className="border-t border-grey-500 my-4" />
-            <div className="grid gap-4">
-              <IfCloudHosted>
-                <Button size="lg" asChild>
-                  <Link href={callbackUrl}>
-                    <UserIcon className="w-4 h-4" />
-                    <Trans i18nKey="continueAsGuest" />
-                  </Link>
-                </Button>
-              </IfCloudHosted>
-              {hasOIDCProvider ? (
-                <Button
-                  icon={LogInIcon}
-                  size="lg"
-                  onClick={() => signIn("oidc")}
-                >
-                  <Trans
-                    i18nKey="loginWith"
-                    values={{ provider: oidcConfig.name }}
-                  />
-                </Button>
-              ) : null}
+          <hr className="border-t border-grey-500 my-4" />
+          <div className="grid gap-4">
+              <Button
+                icon={LogInIcon}
+                size="lg"
+                onClick={() => signIn("oidc")}
+              >
+                <Trans
+                  i18nKey="loginWith"
+                  values={{ provider: oidcConfig.name }}
+                />
+              </Button>              
             </div>
           </>
-        ) : null}
       </div>
-    </form>
   );
 }
