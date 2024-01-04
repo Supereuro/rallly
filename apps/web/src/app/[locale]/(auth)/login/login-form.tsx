@@ -28,8 +28,6 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
   return (    
       <div className="mb-1 text-2xl font-bold">{t("login")}</div>
         <div className="flex flex-col gap-2">
-          <>
-            <hr className="border-t border-grey-500 my-4" />
             <div className="grid gap-4">
                 <Button
                   icon={LogInIcon}
@@ -42,7 +40,6 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
                   />
                 </Button>              
               </div>
-          </>
       </div>
   );
 }
