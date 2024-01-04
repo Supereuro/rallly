@@ -91,42 +91,17 @@ export function LoginForm({ oidcConfig }: { oidcConfig?: { name: string } }) {
       })}
     >
       <div className="mb-1 text-2xl font-bold">{t("login")}</div>
-      <!--<p className="mb-4 text-gray-500">
-        {t("stepSummary", {
-          current: 1,
-          total: 2,
-        })}
-      </p>-->
-      <!--<fieldset className="mb-4">
-        <label htmlFor="email" className="mb-1 text-gray-500">
-          {t("email")}
-        </label>
-        <TextInput
-          className="w-full"
-          id="email"
-          proportions="lg"
-          autoFocus={true}
-          error={!!formState.errors.email}
-          disabled={formState.isSubmitting}
-          placeholder={t("emailPlaceholder")}
-          {...register("email", { validate: validEmail })}
-        />
+      <p className="mb-4 text-gray-500">
+
+      </p>
+      <fieldset className="mb-4">
         {formState.errors.email?.message ? (
           <div className="mt-2 text-sm text-rose-500">
             {formState.errors.email.message}
           </div>
         ) : null}
-      </fieldset>-->
+      </fieldset>
       <div className="flex flex-col gap-2">
-        <!--<Button
-          loading={formState.isSubmitting}
-          type="submit"
-          size="lg"
-          variant="primary"
-          className=""
-        >
-          {t("continue")}
-        </Button>-->
         {hasAlternativeLoginMethods ? (
           <>
             <hr className="border-t border-grey-500 my-4" />
